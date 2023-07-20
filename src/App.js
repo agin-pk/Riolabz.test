@@ -1,24 +1,34 @@
-import logo from './logo.svg';
+import { useEffect } from 'react';
 import './App.css';
+import Productlist from './components.jsx/Productlist';
+import { useDispatch } from 'react-redux';
+import { fetchProducts } from './apislice';
+import Navbar from './components.jsx/Navbar';
+import Detailpage from './components.jsx/Detailpage';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Category from './components.jsx/Category';
+
 
 function App() {
+
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(fetchProducts())
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Navbar />
+
+        <Routes>
+          <Route path="/" element={<Productlist />}></Route>
+          <Route path="/detailpage/:id" element={<Detailpage />}></Route>
+          <Route path="/category" element={<Category />}></Route>
+        </Routes>
+      </Router>
+    </>
   );
 }
 

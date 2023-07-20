@@ -1,0 +1,12 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.navbar-outercontainer{
+    height: 70px;
+    width: 100%;
+    background-color: rgb(223, 190, 255);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}

@@ -1,0 +1,15 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.outer-buttonclass{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.pagination-button{
+    padding: 8px 12px;
+    background-color: rgb(210, 161, 255);
+    margin: 0px 5px;
+}

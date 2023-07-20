@@ -1,0 +1,22 @@
+.detailpage-outerclass{
+    margin-top: 40px;
+    display: flex;
+    padding: 10px 100px;
+}
+.detail-image img{
+    height: 300px;
+    width: 300px;
+}
+.product-details{
+    padding: 0px 100px;
+}
+.addtocart{
+    margin-top: 50px;
+    padding: 10px 15px;
+    background-color: #d3a5ff;
+    border: none;
+    cursor: pointer;
+}
+.addtocart:hover{
+    background-color: #e1c2ff;
+}
